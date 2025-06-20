@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sketch</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zxq3ote.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <p class="description">Scuoti il telefono fino allo scadere del timer e scopri quale elettrodomestico riesci ad accendere!</p>
+      <button class="btn" onclick="startExperience()">GIOCA</button>
+    </div>
+
+    <!-- Sketch -->
+    <div id="sketch-container" style="display: none"></div>
+
+    <!-- End Screen -->
+    <div id="end-screen" class="screen" style="display: none">
+      <div class="score-container">
+        <p class="description">Hai generato</p>
+        <div style="text-align: center">
+          <p id="joule-value">0</p>
+          <span>joule</span>
+        </div>
+        <p class="description" id="appliance-message">abbastanza da accendere un <span id="appliance-name">[nome appliance]</span></p>
+        <div style="display: flex; justify-content: center">
+          <img src="assets/lampada.png" alt="Appliance" id="appliance-img" />
+        </div>
+        <p class="description">Ora sai il valore dell'energia, utilizzala con riguardo!</p>
+      </div>
+      <button class="btn" onclick="restartExperience()">RIGIOCA</button>
+    </div>
+
+    <!-- Desktop Warning Screen -->
+    <div id="desktop-warning" class="screen" style="display: none; text-align: center">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <p class="description">
+        Per scoprire quanta energia puoi generare devi scuotere il dispositivo...<br />
+        sarebbe un po' difficile con il computer, non credi?
+      </p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="sketch.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
